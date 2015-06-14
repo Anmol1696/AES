@@ -4,7 +4,7 @@ def main(a,b,step):
 	f = open(a,'r')
 	r = f.readlines()
 	f.close()
-	key = ''
+	key = 'VMtZ3QCmaq$dhZVW'
 	o = ''
 	for x in r:
 		o += x
