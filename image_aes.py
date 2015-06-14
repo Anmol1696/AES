@@ -1,14 +1,14 @@
 import aes
 
-def main(a,b,d):
+def main(a,b,step):
 	f = open(a,'r')
 	r = f.readlines()
 	f.close()
-	key = 'hello'
+	key = ''
 	o = ''
 	for x in r:
 		o += x
-	if(d == 'e'):
+	if(step == 'e'):
 		o = aes.Main_Encrypt(o,key)
 	else:
 		o = aes.Main_Decrypt(o,key)
@@ -17,10 +17,10 @@ def main(a,b,d):
 	w.close()
 
 if __name__ == '__main__':
-	d = raw_input('Enter the e or d ->')
-	a = raw_input('Enter the location of the source file')
-	b = raw_input('Enter the location of the target file')
-	main(a,b,d)
+	step = raw_input('Enter the e or d ->')
+	source_file = raw_input('Enter the location of the source file')
+	target_file = raw_input('Enter the location of the target file')
+	main(source_file,target_file,step)
 
 
 
