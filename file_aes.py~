@@ -1,4 +1,4 @@
-import aes
+import main as aes
 
 def main(a,b,step):
 	f = open(a,'r')
