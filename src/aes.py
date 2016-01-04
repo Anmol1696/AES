@@ -1,3 +1,9 @@
+"""
+    Implementation of the AES algorithm in pyhton
+
+    The main Class for the Aes doing all the calculations and steps
+"""
+
 from tables import *
 
 class AesClass:
