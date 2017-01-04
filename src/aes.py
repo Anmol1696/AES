@@ -9,25 +9,25 @@ from tables import *
 class AesClass:
 	def __init__(self,a):
         self.key = []
-		self.do = a
-		self.encrypt = ''
-		self.decrypt = ''
-		self.number = 0
-		self.node = []
+        self.do = a
+        self.encrypt = ''
+        self.decrypt = ''
+        self.number = 0
+        self.node = []
 
-	# Plain text to node
-	def text_node(self,inp):
-		noder = len(inp)/16 + 1
-		self.number = noder
-		box = [0 for x in range(noder)]
-		for u in range(noder):
-			temp = [[0 for x in range(4)]for x in range(4)]
-			for v in range(16):
-				q = 0
-				if len(inp) > (u*16)+v: q = ord(inp[(u*16)+v])
-				temp[v/4][v%4] = q
-			box[u] = temp
-		self.node = box
+    # Plain text to node
+    def text_node(self,inp):
+        noder = len(inp)/16 + 1
+        self.number = noder
+        box = [0 for x in range(noder)]
+        for u in range(noder):
+            temp = [[0 for x in range(4)]for x in range(4)]
+            for v in range(16):
+                q = 0
+                if len(inp) > (u*16)+v: q = ord(inp[(u*16)+v])
+                temp[v/4][v%4] = q
+                box[u] = temp
+        self.node = box
 
 	# Cipher text to node
 	def cipher_node(self,a):
