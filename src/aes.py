@@ -7,9 +7,8 @@
 from tables import *
 
 class AesClass:
-
 	def __init__(self,a):
-		self.key = []
+        self.key = []
 		self.do = a
 		self.encrypt = ''
 		self.decrypt = ''
